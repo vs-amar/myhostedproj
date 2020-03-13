@@ -1,0 +1,68 @@
+.card{
+    width: 100%;
+    box-shadow: none;
+    padding: 5px;
+    border:1px solid black;
+   font-size: 150%;
+    font-family:'Times New Roman', Times, serif;
+  
+    
+    }
+    .btnclass{
+    margin: 10px;
+    width:30%;
+    height:5%;
+    padding: 0%;
+    }
+
+    .btnclass:hover{
+      margin: 10px;
+      width:30%;
+      height:5%;
+      padding: 0%;
+      background-color: rgb(35, 112, 175);
+      cursor: pointer;
+      }
+
+    .btn{
+    width: 20%;
+    margin-top:1% ;
+    margin-left: 40%;
+    }
+    
+    .full-width{
+    width: 100%;
+    padding: 0 5px;
+    }
+    
+    .mat-card .mat-card-title{
+    text-align: center;
+    }
+    
+    .mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+    
+    }
+
+    .list
+{
+  background-color: #0f4c75;
+  margin: 10px 10px 10px 10px;
+  border-radius: 4px;
+  color: white;
+  width: auto;
+
+}
+
+.list:hover
+{
+  background-color: #0f4c75;
+  margin: 10px 10px 10px 10px;
+  border-radius: 4px;
+  color: white;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+border: 1px solid #070707;
+background-color: #1b5b86;
+cursor: pointer;
+
+}

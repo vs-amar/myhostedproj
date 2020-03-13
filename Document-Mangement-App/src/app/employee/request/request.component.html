@@ -1,0 +1,45 @@
+<mat-card >
+        <mat-card-title>SEND REQUEST FOR DOCUMENT</mat-card-title>
+        <mat-card-subtitle style="color: red;" *ngIf="ShowMesaage">All field required</mat-card-subtitle>
+        <mat-card-subtitle style="color:green;" *ngIf="ShowRequest">Request sent successfully</mat-card-subtitle>
+        <mat-card-content>
+        
+        <form [formGroup]="requestForm">
+        <div>
+        <mat-form-field class="full-width">
+        <mat-label class="dropdown">Select Document</mat-label>
+        <mat-select [(value)]="selected" formControlName="Related_Document_Id" >
+        <mat-option>None</mat-option>
+        <mat-option class="list"  *ngFor="let doctype of Alldocuments" value="{{doctype.document_Type_Id}}">{{doctype.document_Type_Name}}</mat-option>
+        </mat-select>
+        </mat-form-field>
+        
+        </div>
+        <div>
+        <mat-label class="label">Enter Query</mat-label>
+        </div>
+        
+        <div >
+        
+        <textarea   matTooltip="Enter A Query or Doubts Regarding To The Document " matTooltipPosition="above" class="card" cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="5"
+        cdkAutosizeMaxRows="10" formControlName="Request_Message" ></textarea>
+        </div>
+        </form>
+        </mat-card-content>
+        <div class="btn">
+       
+        <button  class="btnclass" mat-flat-button color="primary" (click)="Request()">Request</button>
+       
+       
+        <button  class="btnclass" mat-flat-button color="primary" (click)="clear()">Cancel</button>
+       
+        </div>
+        
+        </mat-card>
+        
+        
+        
+        
+        

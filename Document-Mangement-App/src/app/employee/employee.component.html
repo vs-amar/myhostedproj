@@ -1,0 +1,75 @@
+
+<mat-toolbar class="toolbar">
+                <mat-toolbar-row>
+                <mat-icon class="sidenavbtn" (click)="sidenav.toggle();" >burger_menu</mat-icon>
+                <span class="Employee_name">{{UserName}}</span>
+                <span class="example-spacer"></span>
+               
+                <a aria-label="Admin User" [title]="EmplyeeName">
+                
+                
+                       
+                        <i>
+                                <img mat-card-avatar class="icon_img" src="assets\account_circle.png" alt="Admin" [matMenuTriggerFor]="menu">
+                               
+                            </i>
+                       
+                
+                <mat-menu #menu="matMenu">
+                  
+                <mat-card class="admininfocard">
+                <mat-card-content>
+                <button mat-menu-item class="btnprofile" (click)="View_Profile()" >
+                <mat-icon class="icon_Admin_info">informations</mat-icon>
+                <span >Viewprofile</span>
+                </button>
+                
+                <button mat-menu-item class="btnprofile" (click)="logout()">
+                <mat-icon class="icon_Admin_info">settings_power</mat-icon>
+                <span>Log Out</span>
+                </button>
+                </mat-card-content>
+                </mat-card>
+                </mat-menu>
+                </a>
+          
+                </mat-toolbar-row>
+                </mat-toolbar>
+                
+                <div class="all_main">
+                
+                <mat-sidenav-container class="example-container">
+                <mat-sidenav #sidenav mode="side" [opened]="true">
+                <mat-divider class="mat_divider"></mat-divider>
+                <mat-list>
+                <mat-list-item [ngClass]="[nav_item_AllDoc]" (click)="funAllDoc()" routerLink="/Employee/AllDocumentsForEmployee" >
+                <mat-icon class="logo">library_books</mat-icon> <span >ALL DOCUMENTS</span><mat-icon *ngIf="AllDocClick" class="arrow">arrow_right</mat-icon>
+                <span fxFlex></span>
+                </mat-list-item>
+                
+                <mat-divider class="mat_divider"></mat-divider>
+                
+                <mat-list-item [ngClass]="[nav_item_Private]" (click)="funPrivate_Click()" routerLink="Private" >
+                <mat-icon class="logo">people</mat-icon> <span >PRIVATE DOCUMENTS</span><mat-icon *ngIf="PrivateDocClcik" class="arrow">arrow_right</mat-icon>
+                <span fxFlex></span>
+                </mat-list-item>
+                
+                
+                <mat-divider class="mat_divider" ></mat-divider>
+                
+                <mat-list-item [ngClass]="[nav_item_Request]" (click)="funRequest_Click()" routerLink="request" >
+                <mat-icon class="logo" >query_builder</mat-icon> <span (click)="DisplayForm()"> REQUESTS</span><mat-icon *ngIf="RequestClick" class="arrow">arrow_right</mat-icon>
+                <span fxFlex></span>
+                </mat-list-item>
+                </mat-list>
+                
+                </mat-sidenav>
+                
+                <mat-sidenav-content >
+                
+                <router-outlet></router-outlet>
+                
+                </mat-sidenav-content>
+                </mat-sidenav-container>
+                </div>
+                

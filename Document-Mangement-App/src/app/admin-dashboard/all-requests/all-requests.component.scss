@@ -1,0 +1,67 @@
+
+
+.mat-table {
+  overflow: auto;
+  max-height: 1000px;
+}
+
+.mobile-label {
+  display: none;
+}
+
+@media(max-width: 600px) {
+  .mobile-label {
+    width: 80px;
+    display: inline-block;
+        font-weight: bold;
+  }
+
+  .mat-header-row {
+    display: none;
+  }
+
+  .mat-row { 
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 24px;
+  }
+}
+
+
+mat-header-cell {
+ // width: 10%;
+  color:white;
+  background-color: #0f4c75;
+}
+
+button{
+
+  background-color: rgb(24, 185, 24);
+   color: white;   
+}
+
+button:hover{
+background-color: rgb(24, 22, 22);
+cursor: pointer;
+}
+
+.card{
+  background-color:rgb(173, 173, 173);
+}
+
+.tittle
+{
+ margin: auto;
+ 
+}
+.pageinater
+{
+  background-color: rgb(51, 50, 50);
+  color: white;
+}
+
+.newicon
+{
+  color:blue ;
+  font-size: 30px;
+}

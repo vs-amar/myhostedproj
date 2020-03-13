@@ -1,0 +1,119 @@
+<button mat-button class="btn_add_New_Emp" (click)="fun_show_AddNewEmplyee()">ADD NEW EMPLOYEE <mat-icon>person_add
+  </mat-icon></button>
+
+<mat-card *ngIf="show_Add_Emplyee_Form" class="card">
+  <mat-card-content>
+    <mat-card-title>ENTER EMPLOYEE INFORMATION</mat-card-title>
+    <mat-card-subtitle *ngIf="show_success_msg" [ngClass]="[success_message_css]">{{Success_Message}}
+    </mat-card-subtitle>
+
+    <mat-form-field>
+      <input type="text" matInput placeholder="Enter First Name" [formControl]="firstname" [errorStateMatcher]="matcher"
+        required>
+      <mat-error *ngIf="firstname.hasError('required')">
+        First Name is<strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" matInput placeholder="Enter Last Name" [formControl]="lastname" [errorStateMatcher]="matcher"
+        required>
+      <mat-error *ngIf="lastname.hasError('required')">
+        Last Name is<strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Enter Employee ID</mat-label>
+      <input type="text" matInput [formControl]="emp_comp_id" [errorStateMatcher]="matcher" required>
+      <mat-error *ngIf="emp_comp_id.hasError('required')">
+        Employee Id is<strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="email" matInput placeholder="Enter Email" [formControl]="email" [errorStateMatcher]="matcher"
+        required>
+      <mat-error *ngIf="email.hasError('required')">
+        Email is<strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Enter Password</mat-label>
+      <input type="password" matInput [formControl]="password" [errorStateMatcher]="matcher" required>
+      <mat-error *ngIf="password.hasError('required')">
+        Password is<strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+
+
+
+    <button  mat-raised-button class="btn_add_New_Emp" (click)="AddNewEmplyee()">SUBMIT</button>
+
+  </mat-card-content>
+</mat-card>
+
+
+
+
+<mat-card class="card">
+  <mat-card-content>
+    <mat-card-title >ALL EMPLOYEE LIST</mat-card-title>
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Employee">
+    </mat-form-field>
+    <div class="scrollit">
+      <mat-table #table [dataSource]="dataSource" [class.isMobile]="isMobile"  matSort class="mat-elevation-z8" >
+
+      <ng-container matColumnDef="Emp_Id" >
+        <mat-header-cell *matHeaderCellDef>EMPLOYEE ID</mat-header-cell>
+        <mat-cell *matCellDef="let row"> 
+          <span class="mobile-label">EMPLOYEE ID:</span>
+          {{row.Emp_Comp_Id}}
+        </mat-cell>
+      </ng-container> 
+
+
+      <ng-container matColumnDef="Emp_Name">
+        <mat-header-cell *matHeaderCellDef  mat-sort-header> EMPLOYEE NAME </mat-header-cell>
+        <mat-cell *matCellDef="let row"> 
+          <span class="mobile-label">EMPLOYEE NAME:</span>
+          {{row.Emp_First_Name}} {{row.Emp_Last_Name}} 
+        </mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="Emp_email">
+        <mat-header-cell *matHeaderCellDef> EMPLOYEE EMAIL </mat-header-cell>
+        <mat-cell *matCellDef="let row"> 
+          <span class="mobile-label"> EMPLOYEE EMAIL:</span>
+          {{row.Emp_Email}}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="Emp_Password">
+        <mat-header-cell *matHeaderCellDef> EMPLOYEE PASSWORD </mat-header-cell>
+        <mat-cell *matCellDef="let row"> 
+          <span class="mobile-label">EMPLOYEE PASSWORD:</span>
+          {{row.Emp_Password}}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef> ACTION </mat-header-cell>
+        <mat-cell *matCellDef="let row"> 
+          <span class="mobile-label">ACTION:</span>
+          <button mat-raised-button class="btn_ViewDetails">View Details</button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator class="pageinater" [pageSizeOptions]="[10, 25, 100]"></mat-paginator> 
+
+    </div>
+
+  </mat-card-content>
+</mat-card>

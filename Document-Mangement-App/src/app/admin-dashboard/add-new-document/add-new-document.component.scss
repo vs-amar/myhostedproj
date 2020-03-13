@@ -1,0 +1,149 @@
+
+
+  .mat-form-field {
+    font-size: 14px;
+   
+    
+    width: 50%;
+  }
+  
+  
+
+  .scrollit {
+    overflow:scroll;
+    height:800px;
+}
+.selectoption
+{
+    background-color: #7bbae4;
+    color:blue;    
+}
+
+.selectoption:hover
+{
+    background-color: #1a6496;
+    color:blue;
+}
+
+.formfield{
+   // background-color:#3282b8;
+    border-radius: 2px;
+    
+    color: rgb(20, 19, 19);
+ 
+}
+.card_file_name_list{
+//  width:300px;
+  margin-left: 0;
+  background-color:#3994d1;
+  border-radius: 2px;
+  height: auto;
+}
+  .icon_delete{
+    font-size: 30px;
+    color: rgb(27, 26, 26);
+   
+  }
+  .icon_delete:hover{
+    font-size: 30px;
+    color: rgb(236, 14, 14);
+    cursor: pointer;
+  }
+  .file_input
+  {
+    background-color: #3282b8;
+    width: 50%;
+   // height: 100%;
+    font-size: 100%;
+    border: blue solid 0.25px;
+
+  }
+  .h4_tag
+  {
+    color: white;
+  }
+  .file_icon
+  {
+    color: white;
+  }
+
+  .btn_Upload_new_Doc{
+    background-color: rgb(151, 147, 147);
+    margin-top: 10px;
+    margin-left: 0px;
+    border-radius: 10px;
+    //width: 200px;
+   //  height: 50px;
+    color:white;
+  }
+  
+  .btn_Upload_new_Doc:hover{
+      background-color:rgb(61, 59, 59);  
+      cursor: pointer;
+  }
+  .upload_icon{
+    font-size: 30px;
+    color: lightgreen;
+    margin-bottom:0px;
+  }
+  .card_content{
+    padding-left: 50px;
+    padding-top: 50px;
+    background-color: white;
+    height:auto;
+    width: 100%;
+  }
+  .select_label{
+    color: blue;
+  }
+  .mat-list{
+    width: auto;
+  }
+
+  .h3_success_message1{
+   color: lightgreen;
+  }
+  .h3_success_message2{
+    color: rgba(255, 0, 0, 0.651);
+   }
+
+   .btn_Back
+   {
+     color:white;
+     margin: 0px 0px 0px 2px;
+    //  width: 200px;
+    //  height: 50px;
+     border-radius: 10px;
+     background-color: rgb(151, 147, 147);
+   }
+   
+   .btn_Back:hover
+   {
+    background-color:rgb(61, 59, 59);  
+     cursor: pointer;
+     color: white;
+   }
+
+  @media only screen and (max-width: 600px) {
+    mat-card {
+       // margin: 10px;
+        display: inline-flex;
+        flex-flow: row wrap;
+      //  max-width: 100%;
+    }
+    .card_file_name_list{
+      width: 250px;
+    }
+    
+  }
+  
+  @media only screen and (min-width: 800px) {
+    mat-card {
+       margin: 0px;
+       
+      //  max-width: 100%;
+    }
+    .card_file_name_list{
+      width: 730px;
+    }
+  }

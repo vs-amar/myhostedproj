@@ -1,0 +1,12 @@
+
+<mat-list *ngFor="let emplyee of EmployeeList">
+        <mat-list-item >
+          <input type="checkbox" [checked]="IsCheked(emplyee.Emp_Comp_Id)" id="isCheckBox" (change)="selectedEmp(emplyee.Emp_Comp_Id,$event.target.checked) "/> {{emplyee.Emp_First_Name}} {{emplyee.Emp_Last_Name}}
+    </mat-list-item>
+    
+  </mat-list>
+        <button mat-raised-button  [mat-dialog-close] class="btn_Share" (click)="Share()">SHARE</button>
+        <button mat-raised-button  [mat-dialog-close] class="btn_Share" >CANCEL</button>  
+
+
+

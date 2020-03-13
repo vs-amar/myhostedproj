@@ -1,0 +1,41 @@
+<h1 class="docTypeHeading">{{doctype}}</h1>
+<!-- <div class="card_container">
+
+      <mat-card  *ngFor="let document of Perticular_documents" class="Document_card">
+         
+
+          <mat-card-content>
+              <mat-icon class="file_icon">file_copy</mat-icon>
+          </mat-card-content>
+
+          <mat-card class="file_name_card">
+              {{document.Document_Name.substring(0,20)}}
+          </mat-card>
+
+          <mat-card-actions class="action">
+           <mat-icon class="Action_icon_Download" (click)="Download_File(document.Document_Name,document.Document_Data)">archive</mat-icon>
+         <mat-icon class="Action_icon" (click)="ShowFile(document.Document_Name,document.Document_Data)">remove_red_eye</mat-icon> 
+           <mat-icon class="Action_icon_Delete" (click)="Delete_Document(document.Document_Id,document.Document_Name)">delete</mat-icon>
+          </mat-card-actions>
+
+        </mat-card>
+        
+      </div> -->
+
+<mat-list>
+  <mat-list-item id="list_item" class="list" *ngFor="let document of Perticular_documents let i = index">
+    <p mat-line class="p">{{i+1}} &nbsp; {{document.Document_Name}}
+      <mat-icon matTooltip="Delete" matTooltipPosition="left" mat-list-icon class="Action_icon_Delete"
+        (click)="Delete_Document(document.Document_Id,document.Document_Name)">delete</mat-icon>
+      <mat-icon matTooltip="Download " matTooltipPosition="left" mat-list-icon class="Action_icon_Download"
+        (click)="Download_File(document.Document_Name,document.Document_Data)">archive</mat-icon>
+      <mat-icon matTooltip="Share" matTooltipPosition="left" class="Action_icon_Share" mat-list-icon
+        matBadge={{document.Document_ShareCount}} matBadgeOverlap="false" matBadgeColor="white"
+       class="Action_icon_Share"
+        (click)="Share_Document(i,document.Document_Id,document.Document_Name)">share</mat-icon>
+
+    </p>
+
+  </mat-list-item>
+</mat-list>
+<button mat-raised-button matTooltip="Back" matTooltipPosition="left" class="btn_Back" (click)="Back()">BACK</button>

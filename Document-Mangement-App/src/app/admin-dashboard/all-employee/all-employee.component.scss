@@ -1,0 +1,115 @@
+
+
+
+
+.mat-table {
+  overflow: auto;
+  max-height: 1000px;
+}
+
+.mobile-label {
+  display: none;
+}
+
+@media(max-width: 600px) {
+  .mobile-label {
+    width: 80px;
+    display: inline-block;
+        font-weight: bold;
+  }
+
+  .mat-header-row {
+    display: none;
+  }
+
+  .mat-row { 
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 24px;
+  }
+}
+
+
+mat-cell {
+ // width: 10%;
+ // background-color:  #afd1e7;
+}
+
+mat-header-cell {
+ // width: 10%;
+  color:white;
+  background-color: #0f4c75;
+}
+
+button{
+
+  background-color: rgb(24, 185, 24);
+   color: white;   
+}
+
+button:hover{
+background-color: rgb(24, 22, 22);
+cursor: pointer;
+}
+
+.card{
+  background-color:rgb(173, 173, 173);
+}
+
+
+.pageinater
+{
+  background-color: rgb(51, 50, 50);
+  color: white;
+}
+
+.newicon
+{
+  color:blue ;
+  font-size: 30px;
+}
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+.btn_add_New_Emp{
+    background-color: #3282b8;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    color:white;
+  
+  }
+  .btn_add_New_Emp:hover{
+      background-color:#0f4c75;  
+      cursor: pointer;
+  }
+
+  .card{
+    background-color:rgb(173, 173, 173);
+  }
+  .tittle
+  {
+    margin-left: 600px;
+   
+  }
+  .pageinater
+  {
+    background-color: rgb(51, 50, 50);
+    color: white;
+  }
+
+  .success_message_css1{
+     color: green;
+  }
+
+  .success_message_css2{
+    color: red;
+ }
+ th.mat-sort-header-sorted {
+  color: black;
+  }
