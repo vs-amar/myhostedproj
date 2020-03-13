@@ -34,11 +34,11 @@ import { AuthAdminGuard } from './guards/auth-admin.guard';
 const routes: Routes = [
   {
     path:'login',
-    component:AdminDashboardComponent,
+    component:LoginComponent,
   },
       {
         path:'AllComponent',
-         component:AdminDashboardComponent ,
+         component:AdminDashboardComponent,canActivate:[AuthAdminGuard] ,
          children:[
            {
             path:'PerticularDoc',
