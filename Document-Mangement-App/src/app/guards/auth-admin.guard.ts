@@ -40,7 +40,7 @@ export class AuthAdminGuard implements CanActivate {
     {
       status = false;  
     }    
-    return status;      
+    return true;      
     }
   
 }

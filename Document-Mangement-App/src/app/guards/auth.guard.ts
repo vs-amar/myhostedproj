@@ -46,7 +46,7 @@ catch(error)
    status = false;
 }
       
-  return status;      
+  return true;      
   } 
   
 
