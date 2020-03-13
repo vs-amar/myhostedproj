@@ -8,7 +8,7 @@
     </mat-card-subtitle>
 
     <mat-form-field>
-      <input type="text" matInput placeholder="Enter First Name" [formControl]="firstname" [errorStateMatcher]="matcher"
+      <input type="text" matInput placeholder="Enter First Name" [formControl]="firstname"
         required>
       <mat-error *ngIf="firstname.hasError('required')">
         First Name is<strong>required</strong>
@@ -16,7 +16,7 @@
     </mat-form-field>
 
     <mat-form-field>
-      <input type="text" matInput placeholder="Enter Last Name" [formControl]="lastname" [errorStateMatcher]="matcher"
+      <input type="text" matInput placeholder="Enter Last Name" [formControl]="lastname"
         required>
       <mat-error *ngIf="lastname.hasError('required')">
         Last Name is<strong>required</strong>
@@ -25,14 +25,14 @@
 
     <mat-form-field>
       <mat-label>Enter Employee ID</mat-label>
-      <input type="text" matInput [formControl]="emp_comp_id" [errorStateMatcher]="matcher" required>
+      <input type="text" matInput [formControl]="emp_comp_id" required>
       <mat-error *ngIf="emp_comp_id.hasError('required')">
         Employee Id is<strong>required</strong>
       </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="email" matInput placeholder="Enter Email" [formControl]="email" [errorStateMatcher]="matcher"
+      <input type="email" matInput placeholder="Enter Email" [formControl]="email"
         required>
       <mat-error *ngIf="email.hasError('required')">
         Email is<strong>required</strong>
@@ -41,7 +41,7 @@
 
     <mat-form-field>
       <mat-label>Enter Password</mat-label>
-      <input type="password" matInput [formControl]="password" [errorStateMatcher]="matcher" required>
+      <input type="password" matInput [formControl]="password" required>
       <mat-error *ngIf="password.hasError('required')">
         Password is<strong>required</strong>
       </mat-error>
@@ -65,7 +65,7 @@
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Employee">
     </mat-form-field>
     <div class="scrollit">
-      <mat-table #table [dataSource]="dataSource" [class.isMobile]="isMobile"  matSort class="mat-elevation-z8" >
+      <mat-table #table [dataSource]="dataSource"  matSort class="mat-elevation-z8" >
 
       <ng-container matColumnDef="Emp_Id" >
         <mat-header-cell *matHeaderCellDef>EMPLOYEE ID</mat-header-cell>

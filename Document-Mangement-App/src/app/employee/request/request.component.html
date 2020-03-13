@@ -8,7 +8,7 @@
         <div>
         <mat-form-field class="full-width">
         <mat-label class="dropdown">Select Document</mat-label>
-        <mat-select [(value)]="selected" formControlName="Related_Document_Id" >
+        <mat-select formControlName="Related_Document_Id" >
         <mat-option>None</mat-option>
         <mat-option class="list"  *ngFor="let doctype of Alldocuments" value="{{doctype.document_Type_Id}}">{{doctype.document_Type_Name}}</mat-option>
         </mat-select>
