@@ -34,7 +34,7 @@ import { AuthAdminGuard } from './guards/auth-admin.guard';
 const routes: Routes = [
   {
     path:'login',
-    component:LoginComponent,
+    component:AdminDashboardComponent,
   },
       {
         path:'AllComponent',
