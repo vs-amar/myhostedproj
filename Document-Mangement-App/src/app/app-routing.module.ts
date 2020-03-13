@@ -38,7 +38,7 @@ const routes: Routes = [
   },
       {
         path:'AllComponent',
-         component:AdminDashboardComponent,canActivate:[AuthAdminGuard] ,
+         component:AdminDashboardComponent ,
          children:[
            {
             path:'PerticularDoc',
