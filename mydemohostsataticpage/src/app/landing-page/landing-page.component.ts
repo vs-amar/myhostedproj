@@ -14,4 +14,9 @@ export class LandingPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  funAppAdminLogin()
+  {}
+  Login()
+  {}
+
 }
